@@ -275,18 +275,6 @@ train_stances = [label_mapping[label] for label in train_stances]
 train_llm1_stance = [label_mapping[label] for label in train_llm1_stance]
 train_llm2_stance = [label_mapping[label] for label in train_llm2_stance]
 
-train_texts=train_texts[:50]
-train_ids=train_ids[:50]
-train_stances=train_stances[:50]
-train_targets=train_targets[:50]
-train_aux_features=train_aux_features[:50]
-train_comet_intents=train_comet_intents[:50]
-train_llm_intents=train_llm_intents[:50]
-train_llm1_rat=train_llm1_rat[:50]
-train_llm2_rat=train_llm2_rat[:50]
-train_llm1_stance=train_llm1_stance[:50]
-train_llm2_stance=train_llm2_stance[:50]
-
 test_ids=[]
 test_texts=[]
 test_stances=[]
@@ -342,7 +330,7 @@ test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
 # Model parameters
 hidden_dim_rational = 768
 rank = 256  # Rank for factorized bilinear pooling
-num_epochs = 1
+num_epochs = 10
 learning_rate = 0.01
 num_heads=8
 hidden_size=256
